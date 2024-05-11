@@ -35,7 +35,10 @@ touch cuckoo-setup-virtualenv.sh
 sudo gedit cuckoo-setup-virtualenv.sh
 
 
---------------------------------------------------
+---------------------cuckoo-setup-virtualenv.sh-----------------------------
+
+
+
 #!/usr/bin/env bash
 sudo apt-get update && sudo apt-get -y install virtualenv
 sudo apt-get -y install virtualenvwrapper
@@ -48,7 +51,9 @@ echo "source ~/.local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 export WORKON_HOME=~/.virtualenvs
 echo "export WORKON_HOME=~/.virtualenvs" >> ~/.bashrc
 echo "export PIP_VIRTUALENV_BASE=~/.virtualenvs" >> ~/.bashrc
--------------------------------------------------
+
+
+---------------------cuckoo-setup-virtualenv.sh-----------------------------
 
 chmod +x ./cuckoo-setup-virtualenv.sh
 
