@@ -138,6 +138,10 @@ sudo iptables -A FORWARD -s 192.168.56.0/24 -j ACCEPT
 
 // open a new terminal and type into it "workon cuckoo-test" then "cuckoo rooter --sudo --group cuckoo"
 
+// continue the following in the original terminal
+
+workon cuckoo-test
+
 cuckoo web --host 127.0.0.1 --port 8080
 
 // go to your firefox web browser and type 127.0.0.1:8080 and your cuckoo is ready to go
