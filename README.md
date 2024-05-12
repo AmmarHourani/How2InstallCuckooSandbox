@@ -140,9 +140,15 @@ sudo iptables -A FORWARD -s 192.168.56.0/24 -j ACCEPT
 
 // continue the following in the original terminal
 
+ip link set vboxnet0 up
+
+ip addr add 192.168.56.1/24 dev vboxnet0
+
 workon cuckoo-test
 
 cuckoo web --host 127.0.0.1 --port 8080
+
+// open a new third terminal and type into it "workon cuckoo-test" then "cuckoo"
 
 // go to your firefox web browser and type 127.0.0.1:8080 and your cuckoo is ready to go
 
