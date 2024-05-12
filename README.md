@@ -94,12 +94,52 @@ vmcloak-vboxnet0
 
 vmcloak init --verbose --win7x64 win7x64base --cpus 2 --ramsize 2048
 
+// If you face troubles with the line above troubleshoot with ""pip install --upgrade --force-reinstall vmcloak""
+
+// If you face troubles creating win7x64base vm , type virtualbox in the terminal , delete win7x64base vm with the mouse , and retry the above line
+
 vmcloak clone win7x64base win7x64cuckoo
 
 vmcloak install win7x64cuckoo ie11
 
 mcloak snapshot --count 1 win7x64cuckoo 192.168.56.101
 
-cuckoo init
-
 cuckoo community
+
+while read -r vm ip; do cuckoo machine --add $vm $ip; done < <(vmcloak list vms)
+
+cd /home/cuckoo/.cuckoo/conf/
+
+sudo nano virtualbox.conf
+
+// Scroll down to the the line starting with machines=... and remove cuckoo1 . Do not remove 192.168.56.1011 , Now take your cursor to [cuckoo1] , delete every thing from and including [cuckoo1] to the last line above [192.168.56.101] 
+// ctrl+X then Y then enter to save
+
+sudo nano reporting.conf 
+//search for [mongodb] . Under it, switch enabled to yes
+// ctrl+X then Y then enter to save
+
+sudo nano routing.conf
+//go to line where internet = none is written and replace it with internet = ens33 or whatever your interface name is ( find  out using "ip a" from another terminal )
+// ctrl+X then Y then enter to save
+
+cd /etc
+sudo nano sysctl.conf
+// scroll down to the end of the file and append "net.ipv4.conf.vboxnet0.forwarding=1" and another line "net.ipv4.conf.ens33.forwarding=1"  // replace ens33 with your interface name
+// ctrl+X then Y then enter to save
+
+sudo iptables -t nat -A POSTROUTING -o ens33 -s 192.168.56.0/24 -j MASQUERADE // replace ens33 with your interface name
+
+sudo iptables -P FORWARD DROP
+
+sudo iptables -A FORWARD -m state --state RELATED,ESTABLISHED -j ACCEPT
+
+sudo iptables -A FORWARD -s 192.168.56.0/24 -j ACCEPT
+
+// open a new terminal and type into it "workon cuckoo-test" then "cuckoo rooter --sudo --group cuckoo"
+
+cuckoo web --host 127.0.0.1 --port 8080
+
+// go to your firefox web browser and type 127.0.0.1:8080 and your cuckoo is ready to go
+
+enjooooooooooooyyyyyyyyyyyyy
