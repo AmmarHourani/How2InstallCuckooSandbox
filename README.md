@@ -140,9 +140,11 @@ sudo iptables -A FORWARD -s 192.168.56.0/24 -j ACCEPT
 
 // continue the following in the original terminal
 
-ip link set vboxnet0 up
+vmcloak-vboxnet0
 
-ip addr add 192.168.56.1/24 dev vboxnet0
+sudo ip link set vboxnet0 up
+
+sudo ip addr add 192.168.56.1/24 dev vboxnet0
 
 workon cuckoo-test
 
