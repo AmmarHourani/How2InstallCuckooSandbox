@@ -102,7 +102,7 @@ vmcloak clone win7x64base win7x64cuckoo
 
 vmcloak install win7x64cuckoo ie11
 
-mcloak snapshot --count 1 win7x64cuckoo 192.168.56.101
+vmcloak snapshot --count 1 win7x64cuckoo 192.168.56.101
 
 cuckoo community
 
