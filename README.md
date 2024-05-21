@@ -1,7 +1,9 @@
 # How2InstallCuckooSandbox
 
 ******************************* PLEASE STAR AND FORK *******************************
+
 ******************************* PLEASE STAR AND FORK *******************************
+
 ******************************* PLEASE STAR AND FORK *******************************
 
 The internet is full of guides on how to install Cuckoo sandbox , all of them are faulty and require troubleshooting . this one is free from all of it.
@@ -160,5 +162,7 @@ cuckoo web --host 127.0.0.1 --port 8080
 // go to your firefox web browser and type 127.0.0.1:8080 and your cuckoo is ready to go
 
 ******************************* PLEASE STAR AND FORK *******************************
+
 ******************************* PLEASE STAR AND FORK *******************************
+
 ******************************* PLEASE STAR AND FORK *******************************
