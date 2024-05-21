@@ -4,7 +4,7 @@ The internet is full of guides on how to install Cuckoo sandbox , all of them ar
 // source is https://medium.com/@raytracer96024/a-straight-forward-guide-to-installing-cuckoo-sandbox-on-ubuntu-18-04-6a6e95bb34e5
 // with a lot of troubleshooting and fixing
 
-// ubuntu 18 from https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso
+// Only use ubuntu 18 from https://releases.ubuntu.com/18.04/ubuntu-18.04.6-desktop-amd64.iso , other versions WONT WORK !!!!!!!!!!!
 
 // the user during UBUNTU 18 OS installation should be cuckoo
 
