@@ -1,4 +1,9 @@
 # How2InstallCuckooSandbox
+
+******************************* PLEASE STAR AND FORK *******************************
+******************************* PLEASE STAR AND FORK *******************************
+******************************* PLEASE STAR AND FORK *******************************
+
 The internet is full of guides on how to install Cuckoo sandbox , all of them are faulty and require troubleshooting . this one is free from all of it.
 
 // source is https://medium.com/@raytracer96024/a-straight-forward-guide-to-installing-cuckoo-sandbox-on-ubuntu-18-04-6a6e95bb34e5
@@ -154,4 +159,6 @@ cuckoo web --host 127.0.0.1 --port 8080
 
 // go to your firefox web browser and type 127.0.0.1:8080 and your cuckoo is ready to go
 
-enjooooooooooooyyyyyyyyyyyyy
+******************************* PLEASE STAR AND FORK *******************************
+******************************* PLEASE STAR AND FORK *******************************
+******************************* PLEASE STAR AND FORK *******************************
